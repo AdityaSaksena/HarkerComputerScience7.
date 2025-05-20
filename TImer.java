@@ -1,4 +1,4 @@
-public class Timer {
+public class TImer {
     public static void main(String[] args) throws Exception {
         System.out.println("Enter seconds for the timer:");
 

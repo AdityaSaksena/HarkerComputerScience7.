@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timer</title>
+  <style>
+    body {
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #000000;
+      font-family: sans-serif;
+    }
+
+    .timer {
+      font-size: 5rem;
+      counter-reset: countdown 10;
+    }
+
+    .timer::before {
+      content: counter(countdown);
+      animation: countdown 10s steps(10, end) forwards;
+    }
+
+    @keyframes countdown {
+      0% { counter-reset: countdown 10; }
+      10% { counter-reset: countdown 9; }
+      20% { counter-reset: countdown 8; }
+      30% { counter-reset: countdown 7; }
+      40% { counter-reset: countdown 6; }
+      50% { counter-reset: countdown 5; }
+      60% { counter-reset: countdown 4; }
+      70% { counter-reset: countdown 3; }
+      80% { counter-reset: countdown 2; }
+      90% { counter-reset: countdown 1; }
+      100% { counter-reset: countdown 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="timer"></div>
+</body>
+</html>
